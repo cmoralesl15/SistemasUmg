@@ -1,4 +1,4 @@
-namespace AnalisisDeSistemas
+namespace SistemasUmg.Entidades
 {
     public class Venta
     {
