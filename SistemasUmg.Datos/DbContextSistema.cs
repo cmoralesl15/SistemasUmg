@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SistemasUmg.Datos.Mapping;
+using SistemasUmg.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,7 +9,7 @@ namespace SistemasUmg.Datos
 {
     public class DbContextSistema : DbContext
     {
-       /* public DbSet<Articulo> Articulos { get; set; }
+        public DbSet<Articulo> Articulos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Comprobante> Comprobantes { get; set; }
         public DbSet<DetalleIngreso> DetalleIngresos { get; set; }
@@ -25,6 +27,22 @@ namespace SistemasUmg.Datos
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-        }*/
+            modelBuilder.ApplyConfiguration(new ArticuloMap());
+            modelBuilder.ApplyConfiguration(new CategoriaMap());
+            modelBuilder.ApplyConfiguration(new ComprobanteMap());
+            modelBuilder.ApplyConfiguration(new DetalleIngresoMap());
+            modelBuilder.ApplyConfiguration(new DetalleVentaMap());
+            modelBuilder.ApplyConfiguration(new DocumentoMap());
+            modelBuilder.ApplyConfiguration(new EstadoIngresoMap());
+            modelBuilder.ApplyConfiguration(new EstadoVentaMap());
+            modelBuilder.ApplyConfiguration(new IngresoMap());
+            modelBuilder.ApplyConfiguration(new PersonaMap());
+            modelBuilder.ApplyConfiguration(new RolMap());
+            modelBuilder.ApplyConfiguration(new TipoComprobanteMap());
+            modelBuilder.ApplyConfiguration(new TipoDocumentoMap());
+            modelBuilder.ApplyConfiguration(new TipoPersonaMap());
+            modelBuilder.ApplyConfiguration(new UsuarioMap());
+            modelBuilder.ApplyConfiguration(new VentaMap());
+        }
     }
 }
