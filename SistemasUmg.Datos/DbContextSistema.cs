@@ -28,6 +28,7 @@ namespace SistemasUmg.Datos
         public DbSet<Persona> Personas { get; set; }
         public DbSet<Rol> Rols { get; set; }
         public DbSet<TipoComprobante> TipoComprobantes { get; set; }
+        public DbSet<TipoDocumento> TipoDocumentos { get; set; }
         public DbSet<TipoPersona> TipoPersonas { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Venta> Ventas { get; set; }
