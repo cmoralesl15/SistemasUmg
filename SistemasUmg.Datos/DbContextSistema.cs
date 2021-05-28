@@ -1,9 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SistemasUmg.Datos.Mapping;
-using SistemasUmg.Entidades;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using SistemasUmg.Datos.Mapping.Almacen;
+using SistemasUmg.Datos.Mapping.Compras;
+using SistemasUmg.Datos.Mapping.Comprobantes;
+using SistemasUmg.Datos.Mapping.Documentos;
+using SistemasUmg.Datos.Mapping.Usuarios;
+using SistemasUmg.Datos.Mapping.Ventas;
+using SistemasUmg.Entidades.Almacen;
+using SistemasUmg.Entidades.Compras;
+using SistemasUmg.Entidades.Comprobantes;
+using SistemasUmg.Entidades.Documentos;
+using SistemasUmg.Entidades.Usuarios;
+using SistemasUmg.Entidades.Ventas;
 
 namespace SistemasUmg.Datos
 {
