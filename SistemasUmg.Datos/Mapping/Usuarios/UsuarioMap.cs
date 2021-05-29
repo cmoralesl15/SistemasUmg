@@ -29,6 +29,11 @@ namespace SistemasUmg.Datos.Mapping.Usuarios
             builder.Property(x => x.passwordHash);
             builder.Property(x => x.passwordSal);
             builder.Property(x => x.condicion);
+
+            builder.HasOne(x => x.Documento);
+            builder.HasOne(x => x.Ingreso);
+            builder.HasOne(x => x.Rol);
+            builder.HasOne(x => x.Venta);
         }
     }
 }

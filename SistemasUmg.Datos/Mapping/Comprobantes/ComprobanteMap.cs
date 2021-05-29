@@ -15,6 +15,10 @@ namespace SistemasUmg.Datos.Mapping.Comprobantes
                 .HasMaxLength(7);
             builder.Property(x => x.numero)
                 .HasMaxLength(10);
+
+            builder.HasOne(x => x.Ingreso);
+            builder.HasOne(x => x.TipoComprobante);
+            builder.HasOne(x => x.Venta);
         }
     }
 }

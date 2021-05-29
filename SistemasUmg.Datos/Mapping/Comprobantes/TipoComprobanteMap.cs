@@ -12,6 +12,8 @@ namespace SistemasUmg.Datos.Mapping.Comprobantes
                 .HasKey(x => x.idTipoComprobante);
             builder.Property(x => x.nombre)
                 .HasMaxLength(50);
+
+            builder.HasOne(x => x.Comprobante);
         }
     }
 }

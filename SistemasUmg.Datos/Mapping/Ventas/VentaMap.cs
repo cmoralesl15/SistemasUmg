@@ -17,6 +17,12 @@ namespace SistemasUmg.Datos.Mapping.Ventas
             builder.Property(x => x.impuesto);
             builder.Property(x => x.total);
             builder.Property(x => x.idEstadoVenta);
+
+            builder.HasOne(x => x.Comprobante);
+            builder.HasOne(x => x.DetalleVenta);
+            builder.HasOne(x => x.EstadoVenta);
+            builder.HasOne(x => x.Persona);
+            builder.HasOne(x => x.Usuario);
         }
     }
 }

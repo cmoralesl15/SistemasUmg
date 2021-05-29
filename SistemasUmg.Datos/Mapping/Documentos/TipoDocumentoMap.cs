@@ -12,6 +12,8 @@ namespace SistemasUmg.Datos.Mapping.Documentos
                 .HasKey(x => x.idTipoDocumento);
             builder.Property(x => x.nombre)
                 .HasMaxLength(50);
+
+            builder.HasOne(x => x.Documento);
         }
     }
 }

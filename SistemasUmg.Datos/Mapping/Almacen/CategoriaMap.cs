@@ -14,6 +14,8 @@ namespace SistemasUmg.Datos.Mapping.Almacen
                 .HasMaxLength(50);
             builder.Property(x => x.descripcion)
                 .HasMaxLength(256);
+
+            builder.HasOne(x => x.Articulo);
         }
     }
 }

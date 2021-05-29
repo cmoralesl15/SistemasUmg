@@ -1,3 +1,5 @@
+using SistemasUmg.Entidades.Almacen;
+
 namespace SistemasUmg.Entidades.Ventas
 {
     public class DetalleVenta
@@ -8,5 +10,8 @@ namespace SistemasUmg.Entidades.Ventas
         public int cantidad { get; set; }
         public decimal total { get; set; }
         public decimal descuento { get; set; }
+        //Relaciones
+        public virtual Articulo Articulo { get; set; }
+        public virtual Venta Venta { get; set; }
     }
 }

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace SistemasUmg.Entidades.Usuarios
@@ -10,5 +11,7 @@ namespace SistemasUmg.Entidades.Usuarios
         [StringLength(256, ErrorMessage = "Error: {0} debe tener una longitud máxima de {1}")]
         public string descripcion { get; set; }
         public bool condicion { get; set; }
+        //Relaciones
+        public virtual ICollection<Usuario> Usuario { get; set; }
     }
 }

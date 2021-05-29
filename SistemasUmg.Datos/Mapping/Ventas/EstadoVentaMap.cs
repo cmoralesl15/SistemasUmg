@@ -12,6 +12,8 @@ namespace SistemasUmg.Datos.Mapping.Ventas
                 .HasKey(x => x.idEstadoVenta);
             builder.Property(x => x.nombre)
                 .HasMaxLength(50);
+
+            builder.HasOne(x => x.Venta);
         }
     }
 }

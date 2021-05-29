@@ -26,6 +26,11 @@ namespace SistemasUmg.Datos.Mapping.Usuarios
                 .HasMaxLength(20);
             builder.Property(x => x.email)
                 .HasMaxLength(50);
+
+            builder.HasOne(x => x.Documento);
+            builder.HasOne(x => x.Ingreso);
+            builder.HasOne(x => x.TipoPersona);
+            builder.HasOne(x => x.Venta);
         }
     }
 }

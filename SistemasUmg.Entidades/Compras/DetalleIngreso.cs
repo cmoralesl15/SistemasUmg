@@ -1,3 +1,5 @@
+using SistemasUmg.Entidades.Almacen;
+
 namespace SistemasUmg.Entidades.Compras
 {
     public class DetalleIngreso
@@ -7,5 +9,8 @@ namespace SistemasUmg.Entidades.Compras
         public int idArticulo { get; set; }
         public int cantidad { get; set; }
         public decimal total { get; set; }
+        //Relaciones
+        public virtual Articulo Articulo { get; set; }
+        public virtual Ingreso Ingreso { get; set; }
     }
 }

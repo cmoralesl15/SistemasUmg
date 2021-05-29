@@ -6,15 +6,6 @@ namespace SistemasUmg.Datos.Mapping.Compras
 {
     public class IngresoMap : IEntityTypeConfiguration<Ingreso>
     {
-        public int idIngreso { get; set; }
-        public int idProveedor { get; set; }
-        public int idUsuario { get; set; }
-        public int idComprobante { get; set; }
-        public System.DateTime fechaHora { get; set; }
-        public decimal impuesto { get; set; }
-        public decimal total { get; set; }
-        public int idEstadoIngreso { get; set; }
-
         public void Configure(EntityTypeBuilder<Ingreso> builder)
         {
             builder.ToTable("Ingreso")
@@ -26,6 +17,12 @@ namespace SistemasUmg.Datos.Mapping.Compras
             builder.Property(x => x.impuesto);
             builder.Property(x => x.total);
             builder.Property(x => x.idEstadoIngreso);
+
+            builder.HasOne(x => x.Comprobante);
+            builder.HasOne(x => x.DetalleIngreso);
+            builder.HasOne(x => x.EstadoIngreso);
+            builder.HasOne(x => x.Persona);
+            builder.HasOne(x => x.Usuario);
         }
     }
 }

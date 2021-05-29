@@ -15,6 +15,9 @@ namespace SistemasUmg.Datos.Mapping.Ventas
             builder.Property(x => x.cantidad);
             builder.Property(x => x.total);
             builder.Property(x => x.descuento);
+
+            builder.HasOne(x => x.Articulo);
+            builder.HasOne(x => x.Venta);
         }
     }
 }

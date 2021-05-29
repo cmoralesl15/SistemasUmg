@@ -12,6 +12,8 @@ namespace SistemasUmg.Datos.Mapping.Usuarios
                 .HasKey(x => x.idTipoPersona);
             builder.Property(x => x.nombre)
                 .HasMaxLength(50);
+
+            builder.HasOne(x => x.Persona);
         }
     }
 }

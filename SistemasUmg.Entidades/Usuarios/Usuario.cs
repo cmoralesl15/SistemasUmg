@@ -1,3 +1,7 @@
+using SistemasUmg.Entidades.Compras;
+using SistemasUmg.Entidades.Documentos;
+using SistemasUmg.Entidades.Ventas;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace SistemasUmg.Entidades.Usuarios
@@ -24,5 +28,10 @@ namespace SistemasUmg.Entidades.Usuarios
         public byte[] passwordHash { get; set; }
         public byte[] passwordSal { get; set; }
         public bool condicion { get; set; }
+        //Relaciones
+        public virtual Documento Documento { get; set; }
+        public virtual ICollection<Ingreso> Ingreso { get; set; }
+        public virtual Rol Rol { get; set; }
+        public virtual ICollection<Venta> Venta { get; set; }
     }
 }

@@ -1,3 +1,7 @@
+using SistemasUmg.Entidades.Comprobantes;
+using SistemasUmg.Entidades.Usuarios;
+using System.Collections.Generic;
+
 namespace SistemasUmg.Entidades.Compras
 {
     public class Ingreso
@@ -10,5 +14,11 @@ namespace SistemasUmg.Entidades.Compras
         public decimal impuesto { get; set; }
         public decimal total { get; set; }
         public int idEstadoIngreso { get; set; }
+        //Relaciones
+        public virtual Comprobante Comprobante { get; set; }
+        public virtual ICollection<DetalleIngreso> DetalleIngreso { get; set; }
+        public virtual EstadoIngreso EstadoIngreso { get; set; }
+        public virtual Persona Persona { get; set; }
+        public virtual Usuario Usuario { get; set; }
     }
 }

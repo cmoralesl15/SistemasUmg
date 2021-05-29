@@ -1,3 +1,7 @@
+using SistemasUmg.Entidades.Comprobantes;
+using SistemasUmg.Entidades.Usuarios;
+using System.Collections.Generic;
+
 namespace SistemasUmg.Entidades.Ventas
 {
     public class Venta
@@ -10,5 +14,11 @@ namespace SistemasUmg.Entidades.Ventas
         public decimal impuesto { get; set; }
         public decimal total { get; set; }
         public int idEstadoVenta { get; set; }
+        //Relaciones
+        public virtual Comprobante Comprobante { get; set; }
+        public virtual ICollection<DetalleVenta> DetalleVenta { get; set; }
+        public virtual EstadoVenta EstadoVenta { get; set; }
+        public virtual Persona Persona { get; set; }
+        public virtual Usuario Usuario { get; set; }
     }
 }

@@ -12,6 +12,8 @@ namespace SistemasUmg.Datos.Mapping.Compras
                 .HasKey(x => x.idEstadoIngreso);
             builder.Property(x => x.nombre)
                 .HasMaxLength(50);
+
+            builder.HasOne(x => x.Ingreso);
         }
     }
 }

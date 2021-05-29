@@ -15,6 +15,8 @@ namespace SistemasUmg.Datos.Mapping.Usuarios
             builder.Property(x => x.descripcion)
                 .HasMaxLength(256);
             builder.Property(x => x.condicion);
+
+            builder.HasOne(x => x.Usuario);
         }
     }
 }
